@@ -1,0 +1,53 @@
+@keyframes slide {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  
+  .logos {
+    position: relative;
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-track {
+    display: flex;
+    width: 200%;
+    animation: slide 15s linear infinite;
+  }
+  
+  .logo_item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+  }
+  
+  .logo_item img {
+    height: 50px;
+  }
+  
+  .logos:hover .logo-track {
+    animation-play-state: paused;
+  }
+  
+  .partners .description{
+    font-family:"Orbitron";
+    font-weight: 700;
+    font-size: 24px;
+    color: #FFFFFF;
+  }
+  @media screen and (max-width:767px) {
+    .partners .description{
+      font-size: 17px;
+      text-align: center;
+    }
+    .logo_item img {
+      height: 30px;
+    }
+  }

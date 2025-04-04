@@ -1,0 +1,135 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    max-height: 90vh; 
+    overflow-y: auto;
+    background: white;
+    padding: 11px;
+    border-radius: 8px;
+    width: 400px;
+    position: relative;
+    margin: 10px 4px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  .login_form_btn {
+    color: white;
+    border-radius: 30px;
+    border: none;
+  }
+  .login_bg_logo {
+    margin-left: 35px;
+   
+  }
+  .close_btn_icons{
+      height: 24px;
+  }
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+   
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+  }
+  .eye-icon {
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+      cursor: pointer;
+      font-size: 1.2rem;
+      color: #6c757d;
+    }
+    input.form-control {
+      background-color: #EDEDED; 
+      border: none; 
+      padding-right: 40px;
+      outline: none;
+      box-shadow: none; 
+    }
+    
+    input.form-control::placeholder {
+      color: #6c757d; 
+      opacity: 1; 
+    }
+    
+  
+    input.form-control:focus {
+      background-color: #EDEDED;
+      outline: none;
+      box-shadow: none;
+    }
+    .divider {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      width: 100%;
+      margin: 2px 0;
+    }
+    
+    .line {
+      flex: 1;
+      height: 1px;
+      background-color: #ccc;
+      margin: 0 10px;
+    }
+    
+    .text {
+      white-space: nowrap;
+      font-size: 14px;
+      color: #6c757d; 
+    }
+    .login_icons{
+      height: 20px;
+      
+    }
+   .login_heading{
+      font-family:Orbitron;
+      font-weight: 700;
+   }
+   body{
+      font-family:Orbitron;
+      font-weight: 700;
+      
+   }
+   .text_color{
+      color: #868686;
+   }
+   .app_icons{
+      background: rgb(233, 231, 231);
+      cursor: pointer;
+      width: 60px;
+      text-align: center;
+      border-radius: 14px;
+      padding: 2px;
+      align-items: center;
+   }
+   .modal-content::-webkit-scrollbar {
+    width: 6px; 
+  }
+  
+  .modal-content::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+    border-radius: 10px;
+  }
+  
+  .modal-content::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+  }
+  
+  .modal-content::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }

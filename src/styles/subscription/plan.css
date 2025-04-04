@@ -1,0 +1,343 @@
+.heading_left h1{
+  color: white;
+  font-family: Orbitron;
+  font-size: 48px;
+  font-weight: 600;
+}
+
+.heading_right h1{
+  color: #FFD700;
+  font-family: Orbitron;
+  font-size: 64px;
+  font-weight: 600;
+}
+
+.plan-toggle-container {
+display: flex;
+justify-content: center;
+margin-top: 20px;
+padding: 0 10px;
+}
+
+.plan-toggle {
+display: flex;
+background-color: #333;
+border-radius: 50px; /* Increased border radius */
+padding: 6px; /* Added padding to create space around the buttons */
+gap: 6px; /* Space between buttons */
+width: 100%;
+max-width: 400px;
+}
+
+.plan-action-btn {
+background-color: white;
+color: black;
+border: none;
+position: relative;
+padding: 12px 24px;
+border-radius: 5px;
+cursor: pointer;
+font-weight: bold;
+margin-top: 60px;
+transition: background-color 0.3s ease;
+width: 200px; /* Make button consistent width */
+}
+
+.plan-action-btn-bronze {
+background-color: #CE8946;
+color: black;
+border: none;
+position: relative;
+padding: 12px 24px;
+border-radius: 5px;
+cursor: pointer;
+font-weight: bold;
+margin-top: 60px;
+transition: background-color 0.3s ease;
+width: 200px; /* Make button consistent width */
+}
+
+.plan-action-btn-bronzey{
+background-color: white;
+color: black;
+border: none;
+position: relative;
+padding: 12px 24px;
+border-radius: 5px;
+cursor: pointer;
+font-weight: bold;
+margin-top: 60px;
+transition: background-color 0.3s ease;
+width: 200px; /* Make button consistent width */
+}
+
+.plan-action-btn-gold{
+background-color: white;
+color: black;
+border: none;
+position: relative;
+padding: 12px 24px;
+border-radius: 5px;
+cursor: pointer;
+font-weight: bold;
+margin-top: 36px;
+transition: background-color 0.3s ease;
+width: 200px; /* Make button consistent width */
+}
+
+.plan-action-btn-bronzey:hover{
+background-color: #CE8946;
+}
+
+.plan-action-btn-gold:hover {
+background-color: #FFD700;
+}
+
+.plan-action-btn:hover {
+background-color: #E5E4E2;
+}
+
+.bronzecon{
+background-color: red;
+display: flex;
+flex-direction: column;
+}
+
+.toggle-btn {
+background-color: transparent;
+color: black;
+border: none;
+padding: 12px 60px;
+cursor: pointer;
+transition: all 0.3s ease;
+font-family: Orbitron;
+font-size: 16px;
+font-weight: 700;
+border-radius: 50px; /* Match the container's border radius */
+position: relative;
+z-index: 1;
+flex: 1;
+}
+
+.toggle-btn.active {
+background-color: white;
+color: black;
+}
+
+.toggle-btn:not(.active) {
+background-color: #333;
+color: white;
+}
+
+.toggle-btn:not(.active):hover {
+background-color: rgba(255, 255, 255, 0.2);
+}
+
+.plans-container {
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: transparent;
+margin-top: 30px;
+background-color: yellow;
+width: 100%;
+}
+
+.con {
+flex: 0 0 auto;
+display: flex;
+flex-direction: column;
+align-items: center;
+margin-bottom: 20px;
+min-width: 200px; /* Prevent cards from getting too small */
+}
+
+.con {
+display: flex;
+flex-direction: column;
+align-items: center;
+margin-bottom: 40px;
+}
+
+.plan-img {
+max-width: 76%;
+height: auto;
+}
+.plan1-img{
+  max-width: 76%;
+  height: auto;
+}
+
+.plan-img-container {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+margin-bottom: 10px;
+}
+
+/* Desktop positioning */
+@media screen and (min-width: 768px) {
+.bronze {
+  position: relative;
+  top: 42px;
+  left: 0;
+}
+
+.gold {
+  position: relative;
+  top: 16px;
+  left: 0px;
+}
+
+.platinum {
+  position: relative;
+  top: 42px;
+  right: 0;
+}
+}
+
+/* Mobile - remove positioning */
+@media screen and (max-width: 767px) {
+.bronze, .gold, .platinum {
+  position: static;
+}
+}
+
+@keyframes slideFromLeft {
+from {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+to {
+  transform: translateX(0);
+  opacity: 1;
+}
+}
+
+@keyframes slideFromRight {
+from {
+  transform: translateX(100%);
+  opacity: 0;
+}
+to {
+  transform: translateX(0);
+  opacity: 1;
+}
+}
+
+.heading_left {
+animation: slideFromLeft 1.5s ease-in-out forwards;
+}
+
+.heading_right {
+animation: slideFromRight 1.5s ease-in-out forwards;
+}
+
+/* Media Queries for Responsive Design */
+@media screen and (max-width: 991px) {
+.monthly, .yearly {
+  gap: 15px;
+}
+
+.con {
+  margin-bottom: 30px;
+}
+
+.plan-action-btn,
+.plan-action-btn-bronze,
+.plan-action-btn-bronzey,
+.plan-action-btn-gold {
+  width: 180px;
+  padding: 10px 20px;
+}
+}
+
+@media screen and (max-width: 767px) {
+.heading_left h1 {
+  font-size: 28px;
+  text-align: center;
+}
+
+.heading_right h1 {
+  font-size: 34px;
+  text-align: center;
+}
+
+.toggle-btn {
+  padding: 10px 30px;
+  font-size: 14px;
+}
+
+/* Force horizontal layout */
+.plans-container {
+  flex-direction: column !important;
+  justify-content: flex-start;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  gap: 15px;
+}
+
+/* Hide scrollbar */
+.plans-container::-webkit-scrollbar {
+  display: none;
+}
+
+.con {
+  min-width: 180px;
+}
+
+/* Adjust button sizes */
+.plan-action-btn,
+.plan-action-btn-bronze,
+.plan-action-btn-bronzey,
+.plan-action-btn-gold {
+  margin-top: 15px;
+  width: 140px;
+  font-size: 14px;
+}
+
+.plan-img {
+  max-width: 250px;
+  height: auto;
+}
+}
+
+@media screen and (max-width: 480px) {
+.heading_left h1 {
+  font-size: 20px;
+}
+
+.heading_right h1 {
+  font-size: 26px;
+}
+
+.toggle-btn {
+  padding: 8px 20px;
+  font-size: 12px;
+}
+
+.plan-toggle {
+  max-width: 300px;
+}
+
+/* Maintain horizontal layout but with smaller elements */
+.plan-action-btn,
+.plan-action-btn-bronze,
+.plan-action-btn-bronzey,
+.plan-action-btn-gold {
+  width: 120px;
+  padding: 6px 10px;
+  font-size: 12px;
+}
+
+.plan-img {
+  max-width: 250px; /* Even smaller on very small screens */
+}
+
+.con {
+  min-width: 120px;
+}
+}

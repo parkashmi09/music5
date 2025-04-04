@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Text:wght@900&display=swap');
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide {
+  opacity: 0;
+  transform: translateX(-50%);
+}
+
+.slide-in-animation {
+  animation: slideIn 1s ease-out forwards;
+}
+
+/* Optional: Add different delay for each stat item */
+.stat-item:nth-child(1).slide-in-animation {
+  animation-delay: 0.1s;
+}
+
+.stat-item:nth-child(2).slide-in-animation {
+  animation-delay: 0.2s;
+}
+
+.stat-item:nth-child(3).slide-in-animation {
+  animation-delay: 0.3s;
+}
+
+.stat-item:nth-child(4).slide-in-animation {
+  animation-delay: 0.4s;
+}
+
+.stat-item:nth-child(5).slide-in-animation {
+  animation-delay: 0.5s;
+}
+.unlock-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    overflow: hidden;
+    padding: 40px;
+  }
+  
+  .unlock-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+  }
+  
+  .unlock-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2rem;
+  }
+  
+  .unlock-title {
+    font-family: 'Big Shoulders Stencil Text', sans-serif;
+    font-size: 3rem;
+    color: white;
+    text-align: center;
+    margin-bottom: 6rem;
+    letter-spacing: 2px;
+    line-height: 1.2;
+    max-width: 1200px;
+  }
+  .stats-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 6rem;
+    width: 100%;
+    padding: 0 2rem;
+  }
+  
+  .stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 160px;
+    position: relative;
+  }
+  
+  .stat-number {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 5rem;
+    font-weight: 700;
+    color: #FF4242;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+  
+  .number-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-bottom: 1rem;
+  }
+  
+  .plus-sign {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 6rem;
+    color: #FF4242;
+    line-height: 0.5;
+    position: absolute;
+    top: 140%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .stat-title {
+    font-family: 'Exo', sans-serif;
+    font-size: 1rem;
+    color: #FF4242;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+    opacity: 0.9;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+  .stat-title1 {
+    font-family: 'Exo', sans-serif;
+    font-size: 1rem;
+    color: #FF4242;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+    opacity: 0.9;
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+  }
+  .stat-divider1 {
+    width: 140px;
+    height: 1px;
+    background-color: rgba(255, 66, 66, 0.5);
+    position: relative;
+    margin-top: auto;
+  }
+  
+  .stat-divider {
+    width: 140px;
+    height: 1px;
+    background-color: rgba(255, 66, 66, 0.5);
+    position: relative;
+    margin-top: auto;
+  }
+  
+  /* Special styling for the 100K stat */
+  .stat-item:nth-child(2) .number-wrapper {
+    margin-bottom: 2.5rem;  /* Extra space for plus sign */
+  }
+  
+  .stat-item:nth-child(2) .stat-title {
+    margin-top: 0;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 1200px) {
+    .stats-container {
+      gap: 4rem;
+    }
+    
+    .stat-number {
+      font-size: 4rem;
+    }
+    
+    .plus-sign {
+      font-size: 3rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .stats-container {
+      gap: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    .stat-number {
+      font-size: 2.5rem;
+    }
+    
+    .plus-sign {
+      font-size: 2.5rem;
+    }
+    
+    .stat-title {
+      font-size: 0.9rem;
+    }
+    .unlock-title{
+      font-size: 1.4rem;
+      max-width: 1000px;
+      margin-bottom: 2rem;
+      margin-top: 0rem;
+
+    }
+    .unlock-container{
+      padding: 4px;
+    }
+    .stats-container {
+      width: 100%;
+      padding: 0rem;
+    }
+  }

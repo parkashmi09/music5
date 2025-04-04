@@ -1,0 +1,75 @@
+.headline .card-img {
+  height: 300px;
+}
+.headline .content {
+  backdrop-filter: blur(10px);
+}
+.card-img-overlay {
+  padding: 0;
+}
+
+.content {
+  padding: 9px !important;
+  border-radius: 0px 0px 4px 4px;
+  margin: 0;
+}
+.headline .article_button:hover {
+  background-color: #ffff;
+  color: black;
+}
+.timer {
+  background-color: #ffff;
+  color: black;
+  border-radius: 20px;
+}
+.headline .card {
+  border-radius: 10px;
+  overflow: hidden;
+}
+.backgroundImage {
+  background-image: url("../../assets/blog/headline/Rectangle.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.card_section{
+    background-color: transparent;
+}
+.card_section:hover{
+    background-color: gray;
+}
+.card_section{
+    height: 250px;
+}
+.card_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   
+    padding: 30px;
+  }
+  .data{
+    display: flex;
+    flex-direction: column;
+
+
+    align-items: center;
+    justify-content: center;
+
+  }
+  
+  .card_section img {
+    width: 50px; 
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .card_section div {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+  }

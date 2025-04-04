@@ -1,0 +1,3 @@
+# Redirects for Firebase Authentication
+/*    /index.html   200
+/__/auth/*    /index.html   200 

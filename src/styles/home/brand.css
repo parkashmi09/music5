@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 30px 20px;
+  z-index: 2;
+}
+
+
+.video-overlay h3 {
+    color: white;
+    font-family: 'Russo One', sans-serif;  /* Changed to match the tech style better */
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;    
+    line-height: 2;
+    position: absolute;
+    top: 40%;
+    transform: translate(-0%, 0%); /* Center the text both horizontally and vertically */
+    text-shadow: 
+      0 0 10px rgba(0, 157, 255, 0.5),
+      0 0 20px rgba(0, 0, 0, 0.8);
+    width: 100%;
+    max-width: 80%;
+    padding: 0px;
+    border-radius: 5px;
+}
+
+.brand-section {
+    min-height: 100vh;
+    background-color: #000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .brand-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0px;
+    max-width: 1600px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .video-frame {
+    position: relative;
+    aspect-ratio: 9/19;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 157, 255, 0.3);
+    border: 2px solid rgba(0, 157, 255, 0.2);
+  }
+  
+  .video-frame::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    z-index: 2;
+    border-radius: 30px 30px 0 0;
+  }
+  
+  .video-frame video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }  
+  .brand-card {
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .card-content {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .card-content h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .line-decorator {
+    font-size: 2rem;
+    color: white;
+    opacity: 0.8;
+  }
+  
+  .see-all-btn {
+    margin-top: 20px;
+    padding: 10px 30px;
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .see-all-btn:hover {
+    background: white;
+    color: black;
+  }
+  
+  @media (max-width: 1400px) {
+    .video-overlay h3 {
+      font-size: 1.75rem;
+    }
+  }
+  /* Media Queries */
+  @media (max-width: 1200px) {
+    .brand-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .brand-card {
+      grid-column: span 3;
+      order: -1;
+    }
+    .video-overlay h3 {
+        font-size: 1.5rem;
+      }
+  }
+  
+  @media (max-width: 768px) {
+    .brand-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+    
+    .brand-card {
+      grid-column: span 2;
+    }
+    
+    .video-overlay {
+        padding: 20px 15px;
+      }
+      
+      .video-overlay h3 {
+        font-size: 1.25rem;
+      }
+    
+    .card-content h2 {
+      font-size: 2rem;
+    }
+
+  }
+  
+  @media (max-width: 480px) {
+    .brand-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px; /* Space between elements */
+    }
+  
+    .brand-grid {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      max-width: 100%;
+      gap: 20px; /* Space between video frames and brand card */
+    }
+    
+    .video-frame {
+      width: 90%; /* Slightly narrower than full width */
+      aspect-ratio: 7/9;
+      max-width: 350px; /* Optional: prevent frames from getting too wide */
+    }
+  
+    .brand-card {
+      width: 90%;
+      max-width: 350px; /* Consistent with video frames */
+      display: flex;
+      order: 2; /* Ensure brand card is in the middle */
+
+
+      justify-content: center;
+      align-items: center;
+    }
+    .video-overlay h3 {
+      color: white;
+      font-family: 'Russo One', sans-serif;  /* Changed to match the tech style better */
+      font-size: rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      text-align: center;    
+      line-height: 2;
+      position: absolute;
+      top: 40%;
+      transform: translate(-0%, 0%); /* Center the text both horizontally and vertically */
+      text-shadow: 
+        0 0 10px rgba(0, 157, 255, 0.5),
+        0 0 20px rgba(0, 0, 0, 0.8);
+      width: 100%;
+      max-width: 80%;
+      border-radius: 5px;
+      padding-left: 52px;
+      padding-right: 40px;
+
+  }
+  }

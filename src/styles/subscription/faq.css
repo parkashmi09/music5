@@ -1,0 +1,37 @@
+.gradient-bg {
+    background: linear-gradient(180deg, #505A66, #435561, #292B3A);
+  }
+  .faq{
+    border-radius: 8px !important;
+  }
+  .accordion-item {
+    background: transparent !important; 
+    border: none; 
+  }
+  
+  .accordion-button {
+    background: transparent !important; 
+    border-bottom: 1px solid #ccc !important;
+    box-shadow: none !important; 
+    color: white !important;
+  }
+  
+  .accordion-button:not(.collapsed) {
+    background: transparent !important; 
+    color: #fff !important; 
+  }
+  
+  .accordion-body {
+    background: transparent !important; 
+    color: white !important; 
+    font-family:Quicksand;
+    font-weight: 400;
+    font-size: 15px;
+  }
+  .accordion-button{
+    font-family:Quicksand;
+    font-weight: 400;
+    font-size: 15px;
+
+  }
+  

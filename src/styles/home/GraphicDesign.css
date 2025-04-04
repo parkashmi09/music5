@@ -1,0 +1,236 @@
+/* Import the Orbitron font */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+/* Main section styling */
+.graphic-design-section {
+  min-height: 100vh;
+  background-color: #000;
+  color: #fff;
+  overflow: hidden;
+  padding: 80px 0;
+}
+
+/* Typography */
+.display-4 {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-shadow: 
+    0 0 10px rgba(255, 255, 255, 0.3),
+    0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+.lead {
+  font-family: 'Exo', sans-serif;
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+/* Card styling */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background:white;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(10px);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Button styling */
+.btn-gradient {
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  border: none;
+  color: white;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-gradient:hover {
+  background: linear-gradient(90deg, #0072ff, #00c6ff);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 114, 255, 0.4);
+}
+
+/* Image card styling */
+.image-card {
+  height: 150px;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  display: block;
+}
+
+.image-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.image-card:hover {
+  transform: scale(1.05);
+}
+
+.image-card.selected {
+  border: 2px solid #00c6ff;
+  box-shadow: 0 0 15px rgba(0, 198, 255, 0.7);
+}
+
+.image-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  height: 50%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.image-card:hover .image-overlay {
+  opacity: 1;
+}
+
+/* Feature card styling */
+.feature-card {
+  background: rgba(20, 20, 30, 0.5);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.feature-card:hover {
+  background: rgba(30, 30, 50, 0.7);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.feature-icon {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Animation classes */
+.animate-element {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.element-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Mockup result styling */
+.mockup-result {
+  transition: all 0.3s ease;
+  position: relative;
+  min-height: 200px;
+  display: block;
+  width: 100%;
+}
+
+.mockup-result.loading {
+  background-color: rgba(20, 20, 30, 0.5);
+  border-radius: 8px;
+  min-height: 300px;
+}
+
+.mockup-result img {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+.mockup-result:hover {
+  transform: scale(1.02);
+}
+
+/* Add a loading indicator for the mockup result */
+.mockup-result::before {
+  content: "Loading preview...";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-family: 'Exo', sans-serif;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.mockup-result:empty::before {
+  opacity: 1;
+}
+
+/* Form controls styling */
+.form-control, .form-select {
+  background-color: rgba(30, 30, 40, 0.8) !important;
+  border-color: rgba(100, 100, 150, 0.3) !important;
+  color: white !important;
+}
+
+.form-control:focus, .form-select:focus {
+  background-color: rgba(40, 40, 60, 0.8) !important;
+  border-color: #00c6ff !important;
+  box-shadow: 0 0 0 0.25rem rgba(0, 198, 255, 0.25) !important;
+}
+
+/* Media queries */
+@media (max-width: 992px) {
+  .graphic-design-section {
+    padding: 60px 0;
+  }
+  
+  .display-4 {
+    font-size: 2.5rem;
+  }
+  
+  .image-card {
+    height: 120px;
+  }
+}
+
+@media (max-width: 768px) {
+  .display-4 {
+    font-size: 2rem;
+  }
+  
+  .lead {
+    font-size: 1rem;
+  }
+  
+  .image-card {
+    height: 100px;
+  }
+}
+
+@media (max-width: 576px) {
+  .graphic-design-section {
+    padding: 40px 0;
+  }
+  
+  .display-4 {
+    font-size: 1.8rem;
+  }
+  
+  .card-body {
+    padding: 1rem;
+  }
+} 

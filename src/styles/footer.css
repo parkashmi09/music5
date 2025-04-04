@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+.footer_section {
+  background-color: #222222;
+  color: white;
+  border-top-right-radius: 40px;
+  border-top-left-radius: 40px;
+}
+
+.footer_section li {
+  list-style: none !important;
+  cursor: pointer;
+}
+
+.footer_section ol,
+ul {
+  padding-left: 0rem !important;
+}
+
+.right_reserved {
+  color: #FFFFFF;
+  font-family: "Orbitron";
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.footer_section span {
+  font-family: "Orbitron";
+  font-weight: 700;
+  font-size: 17px;
+}
+
+.footer_section li {
+  font-family: "Orbitron";
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 4px 0px;
+}
+
+.icon_bg {
+  background-color: rgba(255, 255, 255, 0.08);
+  padding: 10px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+}
+
+@media screen and (max-width: 700px) {
+  .footer_section .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .footer_section .col-lg-4 {
+    width: 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .footer_section .col-lg-2 {
+    width: 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .icon_bg {
+    background-color: rgba(255, 255, 255, 0.08);
+    padding: 0px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+  }
+}

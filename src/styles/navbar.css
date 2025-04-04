@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+.main_logo{
+    height:90px !important;
+}
+
+.nav-link{
+    font-family:"Anton";
+    font-weight: 400;
+    font-size: 20px;
+    color: white !important;
+}
+
+.login_btn{
+    color: #FD6262;
+}
+
+.getStartedbtn{
+    border:1px solid #FFFFFF;
+    padding: 8px 10px;
+    border-radius: 10px;
+}
+
+.navbar-toggler-icon {
+    filter: invert(1);
+}
+  
+.nav-menu {
+    display: flex;
+    align-items: center;
+}
+
+.nav-link {
+    font-family: 'Anton', sans-serif;
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    letter-spacing: 1px;
+    padding: 8px 0;
+    transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+    color: #FD6262;
+}
+
+.login-button {
+    display: flex;
+}
+
+.login-link {
+    font-family: 'Anton', sans-serif;
+    font-size: 18px;
+    color: #FD6262;
+    text-decoration: none;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    transition: color 0.2s ease;
+}
+
+.login-link:hover {
+    color: #ff8080;
+}
+
+.get-started-button {
+    font-family: 'Anton', sans-serif;
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    letter-spacing: 1px;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 4px;
+    padding: 6px 16px;
+    transition: all 0.3s ease;
+}
+
+.get-started-button:hover {
+    background-color: white;
+    color: black;
+}
+
+.dropdown-arrow {
+    font-size: 12px;
+    margin-top: 2px;
+}
+
+/* Compact the navbar to match image */
+nav {
+    padding: 6px 0;
+}
+
+.container {
+    max-width: 1200px;
+}
+
+/* Make sure all nav items are aligned properly */
+.nav-menu li {
+    display: flex;
+    align-items: center;
+}
+
+/* Ensure consistent spacing */
+.nav-menu {
+    gap: 24px; /* Slightly tighter spacing to match image */
+}
+
+/* Services dropdown styling - adjust as needed */
+.services-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    min-width: 200px;
+    z-index: 9001;
+    border-radius: 4px;
+    display: none;
+}
+
+.nav-menu li.relative.group:hover .services-dropdown {
+    display: block;
+}
+
+/* Mobile Menu Styles */
+.mobile-menu {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 0px;
+}
+
+.mobile-menu.active {
+    max-height: 80vh !important; /* Increase this from 500px */
+    overflow-y: auto; /* Add scrolling for very tall menus */
+}
+
+.mobile-menu ul {
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-menu .nav-link {
+    padding: 0px 0;
+    width: 100%;
+    display: block;
+}
+
+.mobile-services-dropdown {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile-services-dropdown .services-dropdown {
+    position: static;
+    background-color: transparent;
+    width: 100%;
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+.mobile-dropdown-content {
+    padding-left: 16px;
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.mobile-dropdown-content.active {
+    display: block !important;
+}
+
+/* Mobile hamburger animation */
+.mobile-menu-button span {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Show mobile dropdown when active */
+.mobile-services-dropdown.active .mobile-dropdown-content {
+    display: block !important;
+}
+
+@media screen and (max-width:700px) {
+    .main_logo{
+        height: 60px !important;
+    }
+    
+    .mobile-menu .get-started-button {
+        width: 36%;
+        display: block;
+        text-align: center;
+        margin-top: 8px;
+    }
+    
+    .mobile-menu .login-button {
+        width: 100%;
+    }
+}
